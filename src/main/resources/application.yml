@@ -9,9 +9,9 @@ spring:
 #    url:  jdbc:mysql://localhost:3306/testdb?createDatabaseIfNotExist=true
 #    username: root
 #    password: Lazer@GR*863
-#    url:  jdbc:postgresql://ep-restless-river-71959864-pooler.ap-southeast-1.postgres.vercel-storage.com:5432/verceldb
-#    username: default
-#    password: fTD5Z4WjvnKu
+    url:  jdbc:postgresql://ep-restless-river-71959864-pooler.ap-southeast-1.postgres.vercel-storage.com:5432/verceldb
+    username: default
+    password: fTD5Z4WjvnKu
   jpa:
     properties:
       hibernate:
@@ -19,10 +19,10 @@ spring:
         jdbc:
           lob:
             non_contextual_creation: true
-#        dialect: org.hibernate.dialect.PostgreSQLDialect
-#    hibernate:
-#        ddl-auto: update
-#    show-sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+        ddl-auto: update
+    show-sql: true
   cloud:
     config:
       server:
@@ -30,4 +30,4 @@ spring:
           uri: https://github.com/lokeshrajgadkar/tutorial-api-config
           clone-on-start: true
   config:
-    import: optional:configserver:http://localhost:8082
+    import: optional:configserver:https://tutorial-api-config-server.onrender.com
