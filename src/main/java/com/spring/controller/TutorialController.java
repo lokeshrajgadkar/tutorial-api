@@ -4,6 +4,7 @@ import com.spring.api.TutorialApi;
 import com.spring.entity.Tutorial;
 import com.spring.respository.TutorialRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +14,8 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "http://localhost:8081")
+//@CrossOrigin(origins = "http://localhost:8081")
+@RefreshScope
 public class TutorialController implements TutorialApi {
 
     @Autowired

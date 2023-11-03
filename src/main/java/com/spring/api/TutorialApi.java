@@ -27,8 +27,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
         ),
         servers = {
                 @Server(
+                        description = "Dev Environment",
+                        url = "https://tutorial-api.onrender.com"
+                ),
+                @Server(
                         description = "Local Environment",
-                        url = "http://localhost:8080"
+                        url = "http://localhost:8081"
                 )
         }
 )
